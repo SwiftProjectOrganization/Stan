@@ -31,7 +31,7 @@ By default it expects all Stan models and input data json files to be in a subdi
 
 Below usage examples follows the Bernoulli example in the cmdstan folder. For this to work out of the box, have in your "~/Documents" directory a subdirectory "Stan" containing a copy of the "bernoulli.data.json" file from the cmdstan installation folder.
 
-If you want to run the CLI from a shell, the shell needs to be able to run "./stan". The way I do this is to copy the "stan" binary from your Xcode build directory to the "~/Documents/Stan" directory.
+If you want to run the CLI from a shell, the shell needs to be able to run "./stan". The way I do this is to copy the "stan" binary from your Xcode build directory to the "~/Documents/Stan" directory and execute the commands below from within that directory.
 
 That "stan" binary can be found in finder:
 
@@ -54,21 +54,21 @@ USAGE: ./stan <subcommand>
 
 OPTIONS:
 
-  --version               Show the version
+  --version                  Show the version
   
-  -h, --help              Show help information
+  -h, --help                 Show help information
 
 SUBCOMMANDS:
 
-  compile                 Compile the Stan model
+  1. compile                 Compile the Stan model
   
-  sample (default)        Sample the Stan model
+  2. sample (default)        Sample the Stan model
   
-  optimize                Optimize the Stan model
+  3. optimize                Optimize the Stan model
   
-  pathfinder              Pathfinder approximation
+  4. pathfinder              Pathfinder approximation
   
-  stansummary             Run the stansummary program
+  5. stansummary             Run the stansummary program
   
   
   See 'stan help <subcommand>' for detailed help.
