@@ -1,3 +1,4 @@
+
 //
 //  Basics.swift
 //
@@ -8,10 +9,9 @@
 import Cocoa
 import Foundation
 
-let cmdstan = "/Users/rob/Projects/StanSupport/cmdstan"
-
 func swiftSyncFileExec(program: String,
-                       arguments: [String]) -> (String, String) {
+                       arguments: [String],
+                       method: String = "sample") -> (String, String) {
   let process = Process()
   process.executableURL = URL(fileURLWithPath: program)
   process.arguments = arguments
@@ -31,7 +31,11 @@ func swiftSyncFileExec(program: String,
     //print(output)
     let error = String(decoding: errorData, as: UTF8.self)
     //print(error)
-    return ("Command `\(program)` completed successfully.","")
+    if method == "" {      
+      return ("Command `\(program)` completed successfully.","")
+    } else {
+      return ("Command `\(program) \(method)` completed successfully.","")
+    }
   } catch {
     return ("", "Command error: \(error.localizedDescription)")
   }

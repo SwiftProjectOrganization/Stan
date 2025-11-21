@@ -9,7 +9,8 @@ import Foundation
 
 public func createStanFile(_ data: String,
                            dirUrl: URL,
-                           modelName: String) -> (String, String) {
+                           modelName: String,
+                           verbose: Bool = false) -> (String, String) {
   
   let fileManager = FileManager.default
   
@@ -22,11 +23,8 @@ public func createStanFile(_ data: String,
       do {
         let fileContent = try String(contentsOf: fileUrl, encoding: .utf8)
         if fileContent == data {
-          //print("Stan file did not change.")
           let binaryPath: String = dirUrl.path + "/" + modelName
-          //print(binaryPath)
           if fileManager.fileExists(atPath: binaryPath) {
-            //print("Binary available.")
             return("Stan model file has not changed, no compilation needed.", "")
           } else {
             return ("Compilation needed.", "")
@@ -45,7 +43,9 @@ public func createStanFile(_ data: String,
     do {
       let fileUrl = URL(fileURLWithPath: String(describing: filePath))
       try data.write(to: fileUrl, atomically: true, encoding: .utf8)
-      print("New Stan model file created.")
+      if verbose {
+        print("New Stan model file created.")
+      }
       return ("Compilation needed.", "")
       
     } catch {

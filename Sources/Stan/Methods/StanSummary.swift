@@ -27,7 +27,8 @@ public func stanSummary(dirUrl: URL,
                                               dirUrl.path + "/" + modelName + "_output_2.csv",
                                               dirUrl.path + "/" + modelName + "_output_3.csv",
                                               dirUrl.path + "/" + modelName + "_output_4.csv",
-                                              "--csv_filename", dirUrl.path + "/" + modelName + "_summary.csv"])
+                                              "--csv_filename", dirUrl.path + "/" + modelName + "_summary.csv"],
+                                 method: "")
   
   return result
 }

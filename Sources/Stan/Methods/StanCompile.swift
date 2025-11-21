@@ -8,11 +8,13 @@
 import Foundation
 
 public func stanCompile(dirUrl: URL,
-                        modelName: String) -> (String, String) {
+                        modelName: String,
+                        cmdstan: String) -> (String, String) {
   
   let modelPath = "\(dirUrl.path)/\(modelName)"
 
   let result = swiftSyncFileExec(program: "/usr/bin/make",
-                                 arguments: ["-C", cmdstan, "\(modelPath)"])
+                                 arguments: ["-C", cmdstan, "\(modelPath)"],
+                                 method: "(\(modelName) executable)")
   return result
 }

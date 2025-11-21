@@ -31,14 +31,13 @@ public func extractStanSummary(dirUrl: URL,
             count += 1
           }
         } catch {
-          print(error.localizedDescription)
+          return ("", error.localizedDescription)
         }
       }
     } else {
-      print("\(modelName)_summary.csv not found.")
+      return ("", "\(modelName)_summary.csv not found.")
     }
   }
-  //print(theResult)
   
   let result = createCSV(from: [theResult],
                          dirUrl: dirUrl,
