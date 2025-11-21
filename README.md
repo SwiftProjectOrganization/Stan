@@ -12,6 +12,8 @@
 
 A Swift/MacOS 26 based CLI to run Stan programs using Stan's cmdstan executable.
 
+This is very preliminary still!!!! I can see a million improvements, but I needed to be able to run Stan models to use in an accompanying project [SwiftStats](https://github.com/SwiftProjectOrganization/SwiftStats) (also work in progress!).
+
 ## Details
 
 Currently supports:
@@ -28,7 +30,20 @@ This repository is an Xcode project. It expects an environment variable "CMDSTAN
 
 By default it expects all Stan models and input data json files to be in a subdirectory of your "~/Documents" directory.
 
-Below usage examples follow the Bernoulli example in the cmdstan folder. 
+Below usage examples follows the Bernoulli example in the cmdstan folder. For this to work out of the box, have in your "~/Documents" directory a subdirectory "Stan" containing a copy of the "bernoulli.data.json" file from the cmdstan installation folder.
+
+If you want to run the CLI from a shell, the shell needs to be able to run "./stan". The way I do this is to copy the "stan" binary from your Xcode build directory to the "~/Documents/Stan" directory.
+
+That "stan" binary can be found in finder:
+
+1. Click on "Library" in your home folder.
+2. Click on "Developer"
+3. Click on "Xcode/DerivedData"
+4. Click on "Stan_..............."
+5. Click on "Build"
+6. Click on "Products"
+7. Click on "Debug" ... and there is the stan binary!
+
 
 ## Usage
 
