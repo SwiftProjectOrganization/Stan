@@ -71,7 +71,7 @@ SUBCOMMANDS:
   5. stansummary             Run the stansummary program
   
   
-  See 'stan help <subcommand>' for detailed help.
+  See './stan help <subcommand>' for detailed help.
 
 
 rob@Rob-Travel-M5 Stan % ./stan compile
@@ -99,7 +99,7 @@ rob@Rob-Travel-M5 Stan % ./stan sample -h
 
 OVERVIEW: Sample the Stan model.
 
-USAGE: stan sample [--verbose] [--nocompile] [--nosummary] [--cmdstan <cmdstan>] [--directory <directory>] [--model <model>] [<values> ...]
+USAGE: ./stan sample [--verbose] [--nocompile] [--nosummary] [--cmdstan <cmdstan>] [--directory <directory>] [--model <model>] [<values> ...]
 
 ARGUMENTS:
 
