@@ -66,9 +66,11 @@ SUBCOMMANDS:
 
   See 'stan help <subcommand>' for detailed help.
 
+
 rob@Rob-Travel-M5 Stan % ./stan compile
 
 ("Stan model file has not changed, no compilation needed.", "")
+
 
 rob@Rob-Travel-M5 Stan % ./stan compile -V --directory Stan/Test
 
@@ -78,6 +80,7 @@ Created directory file:///Users/rob/Documents/Stan/Test/bernoulli
 New Stan model file created.
 Compiling...
 ("Command `/usr/bin/make (bernoulli executable)` completed successfully.", "")
+
 
 rob@Rob-Travel-M5 Stan % ./stan sample -h
 
