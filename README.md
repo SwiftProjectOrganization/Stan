@@ -47,23 +47,22 @@ That "stan" binary can be found in finder:
 ## Usage
 
 rob@Rob-Travel-M5 Stan % ./stan -h
-
 OVERVIEW: A wrapper for running cmdstan.
 
-USAGE: stan <subcommand>
+USAGE: ./stan <subcommand>
 
 OPTIONS:
-  --version               Show the version.
-  -h, --help              Show help information.
+  --version               Show the version
+  -h, --help              Show help information
 
 SUBCOMMANDS:
 
-  compile                 Compile the Stan model.
-  sample (default)        Sample the Stan model.
-  optimize                Optimize the Stan model.
-  pathfinder              Use Pathfinder approximation.
-  stansummary             Run the Stan summary program.
-
+  compile                 Compile the Stan model
+  sample (default)        Sample the Stan model
+  optimize                Optimize the Stan model
+  pathfinder              Pathfinder approximation
+  stansummary             Run the stansummary program
+  
   See 'stan help <subcommand>' for detailed help.
 
 
