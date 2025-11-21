@@ -38,7 +38,7 @@ That "stan" binary can be found in finder:
 1. Click on "Library" in your home folder.
 2. Click on "Developer"
 3. Click on "Xcode/DerivedData"
-4. Click on "Stan_..............."
+4. Click on "Stan_xxxxxxxxxx"
 5. Click on "Build"
 6. Click on "Products"
 7. Click on "Debug" ... and there is the stan binary!
