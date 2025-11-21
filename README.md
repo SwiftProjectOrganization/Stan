@@ -12,16 +12,16 @@
 
 A Swift/MacOS 26 based CLI to run Stan programs using Stan's cmdstan executable.
 
-This is very preliminary still!!!! I can see a million improvements, but I needed to be able to run Stan models to use in an accompanying project [SwiftStats](https://github.com/SwiftProjectOrganization/SwiftStats) (also work in progress!).
+This is still very preliminary!!!! I can see a million improvements, but I needed to be able to run Stan models to use in an accompanying project [SwiftStats](https://github.com/SwiftProjectOrganization/SwiftStats) (also work in progress!).
 
 ## Details
 
-Currently supports:
+Currently the initial set of cmdstan methods supported is:
 
 1. Compile a Stan model file
-2. Sample from a compiled Stan model and extract the samples in a clean .csv file.
-3. Run Stansummary on the 4 output files created during sampling
-4. Run Stan's optimize option and collect the results in a .csv file
+2. Sample from a compiled Stan model and extract the samples in a clean *model*.samples.csv file.
+3. Run stansummary on the 4 output files created during sampling and create a clean *model*.stansummary.csv file
+4. Run Stan's optimize option and collect the results in a clean *model*.optimize.csv file
 5. Run Stan's pathfinder method
 
 ## Setup
@@ -58,6 +58,7 @@ OPTIONS:
   -h, --help              Show help information.
 
 SUBCOMMANDS:
+
   compile                 Compile the Stan model.
   sample (default)        Sample the Stan model.
   optimize                Optimize the Stan model.
