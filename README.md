@@ -82,11 +82,17 @@ rob@Rob-Travel-M5 Stan % ./stan compile
 rob@Rob-Travel-M5 Stan % ./stan compile -V --directory Stan/Test
 
 ["compile", "cmdstan=/Users/rob/Projects/StanSupport/cmdstan/", "directory=Stan/Test", "model=bernoulli"]
+
 Given directory file:///Users/rob/Documents/Stan/Test/bernoulli does not exist.
+
 Created directory file:///Users/rob/Documents/Stan/Test/bernoulli 
+
 New Stan model file created.
+
 Compiling...
+
 ("Command `/usr/bin/make (bernoulli executable)` completed successfully.", "")
+
 
 
 rob@Rob-Travel-M5 Stan % ./stan sample -h
@@ -96,27 +102,43 @@ OVERVIEW: Sample the Stan model.
 USAGE: stan sample [--verbose] [--nocompile] [--nosummary] [--cmdstan <cmdstan>] [--directory <directory>] [--model <model>] [<values> ...]
 
 ARGUMENTS:
+
   <values>                Arguments for method.
 
 OPTIONS:
+
   -V, --verbose           Show more information.
+  
   -C, --nocompile         Don't compile the model before sampling.
+  
   -S, --nosummary         Don't run stansummary.
+  
   --cmdstan <cmdstan>     Location of cmdstan.
+  
   --directory <directory> Directory path.
+  
   --model <model>         Model name.
+  
   --version               Show the version.
+  
   -h, --help              Show help information.
+  
 
 
 rob@Rob-Travel-M5 Stan % ./stan sample -V
 
 ["sample", "verbose=true", "cmdstan=/Users/rob/Projects/StanSupport/cmdstan/", "directory=Stan", "model=bernoulli"]
+
 ("Command `/usr/bin/make (bernoulli executable)` completed successfully.", "")
+
 ("Command `/Users/rob/Documents/Stan/bernoulli/bernoulli sample` completed successfully.", "")
+
 ("CSV file created at: /Users/rob/Documents/Stan/bernoulli/bernoulli_samples.csv.", "")
+
 ("Command `/Users/rob/Projects/StanSupport/cmdstan//bin/stansummary` completed successfully.", "")
+
 ("CSV file created at: /Users/rob/Documents/Stan/bernoulli/bernoulli_stansummary.csv.", "")
+
 
 
 ## References
