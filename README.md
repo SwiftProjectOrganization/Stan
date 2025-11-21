@@ -7,7 +7,6 @@
 [project-status-img]: https://img.shields.io/badge/lifecycle-experimental-orange.svg
 [CI]:https://github.com/StanJulia/StanIO.jl/actions/workflows/CI.yml/badge.svg
 
-
 ## Purpose
 
 A Swift/MacOS 26 based CLI to run Stan programs using Stan's cmdstan executable.
